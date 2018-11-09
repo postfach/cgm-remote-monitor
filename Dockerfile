@@ -14,12 +14,5 @@ RUN npm install && \
   npm run env
 
 EXPOSE 1337
-ENV DISPLAY_UNITS mmol
-ENV mongo
-ENV mongo_collection entries
-ENV API_SECRET
-ENV ENABLE bridge openaps pump iob basal careportal sage cage maker
-ENV BG_TARGET_TOP
-ENV BG_TARGET_BOTTOM
 
 CMD ["node", "server.js"]

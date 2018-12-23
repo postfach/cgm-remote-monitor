@@ -15,4 +15,13 @@ RUN npm install && \
 
 EXPOSE 1337
 
+ENV DISPLAY_UNITS="mmol" \
+MONGO="" \
+MONGO_COLLECTION="entries" \
+API_SECRET="" \
+ENABLE="bridge openaps pump iob basal careportal sage cage maker" \
+BG_TARGET_TOP="" \
+BG_TARGET_BOTTOM="" \
+BASE_URL="" \
+
 CMD ["node", "server.js"]

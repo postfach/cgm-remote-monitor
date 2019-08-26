@@ -2,9 +2,6 @@ FROM node:10-alpine
 
 MAINTAINER Nightscout Contributors
 
-
-
-
 RUN mkdir -p /opt/app
 ADD . /opt/app
 WORKDIR /opt/app
@@ -16,4 +13,3 @@ RUN npm install && \
 EXPOSE 1337
 
 CMD ["node", "server.js"]
-I 

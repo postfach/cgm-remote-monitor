@@ -2,8 +2,8 @@ FROM node:10-alpine
 
 MAINTAINER Nightscout Contributors
 
-RUN apt-get update && \
-  apt-get -y dist-upgrade
+
+
 
 RUN mkdir -p /opt/app
 ADD . /opt/app
@@ -16,3 +16,4 @@ RUN npm install && \
 EXPOSE 1337
 
 CMD ["node", "server.js"]
+I 

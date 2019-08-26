@@ -2,16 +2,16 @@ FROM node:10-alpine
 
 MAINTAINER Nightscout Contributors
 
+RUN apt-get update && \
+  apt-get -y dist-upgrade
+
 RUN mkdir -p /opt/app
 ADD . /opt/app
 WORKDIR /opt/app
-RUN chown -R node:node /opt/app
-USER node
 
 RUN npm install && \
   npm run postinstall && \
-  npm run env && \
-  npm audit fix
+  npm run env
 
 EXPOSE 1337
 
